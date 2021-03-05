@@ -1,2 +1,2 @@
 # LeetcodeWithGo
-solve leetcode algorithm problem
+Resolve leetcode algorithm problem
