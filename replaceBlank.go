@@ -3,7 +3,7 @@ package leetCode
 const (
 	BLANK = byte(' ')
 )
-func ReplaceBlank(src []byte) {
+func ReplaceBlank(src []byte) []byte {
 	blankCount := 0
 	for _, value := range src {
 		if value == BLANK {
@@ -11,8 +11,8 @@ func ReplaceBlank(src []byte) {
 		}
 	}
 
-	srcP, desP := len(src)-1, len(src)+3*blankCount-1
-	src = append(src, make([]byte, 3*blankCount)...)
+	srcP, desP := len(src)-1, len(src)+2*blankCount-1
+	src = append(src, make([]byte, 2*blankCount)...)
 
 	for ;srcP >= 0 && srcP != desP; {
 		if src[srcP] != BLANK {
@@ -29,4 +29,6 @@ func ReplaceBlank(src []byte) {
 			srcP--
 		}
 	}
+
+	return src
 }
