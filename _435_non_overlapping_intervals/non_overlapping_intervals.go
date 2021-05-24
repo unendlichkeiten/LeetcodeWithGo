@@ -9,11 +9,13 @@ func eraseOverlapIntervals(intervals [][]int) int {
 
 	i, j, n := 1, 0, 0 // i, index of intervals
 	for i < len(intervals) {
-		if intervals[i][0] < intervals[j][len(intervals[j])-1] {
-			n++
+		if intervals[i][0] >= intervals[j][len(intervals[j])-1] {
+			j = i
+			i++
 			continue
 		}
-		j = i
+		i++
+		n++
 	}
 
 	return n
