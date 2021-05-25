@@ -1,6 +1,6 @@
 package _455_assign_cookie
 
-func findContentChildren(g []int, s []int) int {
+func 	findContentChildren(g []int, s []int) int {
 	quickSort(g, 0, len(g)-1)
 	quickSort(s, 0, len(s)-1)
 
