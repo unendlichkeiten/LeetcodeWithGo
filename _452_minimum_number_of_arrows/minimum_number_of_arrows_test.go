@@ -13,8 +13,7 @@ func Test_findMinArrowShots(t *testing.T) {
 	}{
 		// TODO: Add test cases.
 		{"test01", args{[][]int{{1, 2}, {2, 4}, {1, 3}}}, 1},
-		{"test02", args{[][]int{{1, 2}, {2, 3}, {3, 4}, {1, 3}}}, 1},
-
+		{"test02", args{[][]int{{1, 2}, {2, 3}, {3, 4}, {1, 3}}}, 2},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
