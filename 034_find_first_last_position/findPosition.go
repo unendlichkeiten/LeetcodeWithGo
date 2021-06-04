@@ -9,7 +9,7 @@ func searchRange(nums []int, target int) []int {
 	for i < j {
 		mid = (i + j) / 2
 		if nums[mid] >= target {
-			j = mid - 1
+			j = mid
 		} else {
 			i = mid + 1
 		}
@@ -24,17 +24,18 @@ func searchRange(nums []int, target int) []int {
 	i, j = 0, len(nums)-1
 	for i < j {
 		mid = (i + j) / 2
-		if nums[mid] <= target {
-			i = mid + 1
+		if nums[mid] >= target+1 {
+			j = mid
 		} else {
-			j = mid - 1
+			i = mid + 1
 		}
 	}
 
-	if nums[j] != target {
+	if nums[j] > target {
 		lastPos = j - 1
 	} else {
 		lastPos = j
 	}
+
 	return []int{firstPost, lastPos}
 }
