@@ -1,4 +1,4 @@
-package _34_find_first_last_position
+package _034_find_first_last_position
 
 // 使用二分法查找有序数组中出现的 target 首尾位置
 func searchRange(nums []int, target int) []int {

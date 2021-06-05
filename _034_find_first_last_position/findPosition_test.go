@@ -1,4 +1,4 @@
-package _34_find_first_last_position
+package _034_find_first_last_position
 
 import (
 	"reflect"

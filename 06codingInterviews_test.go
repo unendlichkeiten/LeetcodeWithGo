@@ -7,8 +7,8 @@ import (
 func createList(l LinkList, array []int) {
 	for _, value := range array {
 		l.next = &LNode{
-			data : value,
-			next : nil,
+			data: value,
+			next: nil,
 		}
 
 		l = l.next
