@@ -24,7 +24,7 @@ func search(nums []int, target int) bool {
 				l = mid + 1
 			}
 		} else {
-			if nums[mid] < target && target <= nums[n-1] {
+			if nums[mid] < target && target <= nums[r] {
 				l = mid + 1
 			} else {
 				r = mid - 1
