@@ -14,10 +14,13 @@ func search(nums []int, target int) bool {
 		if nums[mid] == target {
 			return true
 		}
-		if nums[l] == nums[mid] && nums[mid] == nums[r] {
+		// 去掉重复元素
+		if nums[l] == nums[mid] {
 			l++
-			r--
-		} else if nums[l] <= nums[mid] {
+			continue
+		}
+		// mid 和 l 在同一个有序数组中
+		if nums[l] < nums[mid] {
 			if nums[l] <= target && target < nums[mid] {
 				r = mid - 1
 			} else {
