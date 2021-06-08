@@ -1,4 +1,6 @@
 # LeetcodeWithGo
+### 图解动画
+- https://github.com/chefyuan/algorithm-base
 ### 剑指offer系列
 - [面试题003：数组中的重复数字](https://github.com/unendlichkeiten/LeetcodeWithGo/blob/main/replicaValue.go)
 - [面试题004：二维数组中查找](https://github.com/unendlichkeiten/LeetcodeWithGo/blob/main/twoDimensionalSearch.go)
