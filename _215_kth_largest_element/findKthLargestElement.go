@@ -7,18 +7,18 @@ func findKthLargest(nums []int, k int) int {
 	}
 
 	pivotPos := 0
-	for l < r {
+	for l <= r {
 		pivotPos = getPartition(nums, l, r)
-		if pivotPos == k {
+		if pivotPos == n-k {
 			return nums[pivotPos]
-		} else if pivotPos < k {
+		} else if pivotPos < n-k {
 			l = pivotPos + 1
 		} else {
 			r = pivotPos - 1
 		}
 	}
 
-	return -1
+	return nums[pivotPos]
 }
 
 func getPartition(nums []int, l, r int) int {
