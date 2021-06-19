@@ -9,8 +9,8 @@ type elem struct {
 	next *elem
 }
 
-func BucketSort(nums []int) {
-	min, max, numsLen := math.MaxInt32, math.MinInt32, len(nums)
+func BucketSort(nums []int, bucketN int) {
+	min, max := math.MaxInt32, math.MinInt32
 
 	// find get min and max value
 	for _, n := range nums {
@@ -24,7 +24,12 @@ func BucketSort(nums []int) {
 	}
 
 	// figure out bucket capacities and put num into bucket
-	i, interval := 0, (max-min)/numsLen
+	i, interval := 0, (max-min)/(bucketN-1)
+	if bucketN > 1 {
+		interval = (max - min) / (bucketN - 1)
+	} else {
+		interval = max - min
+	}
 	bucket := make(map[int]*elem)
 	var pre *elem = nil
 	for _, n := range nums {
@@ -38,7 +43,7 @@ func BucketSort(nums []int) {
 		if pre == nil {
 			bucket[i] = &elem{
 				num:  n,
-				next: nil,
+				next: p,
 			}
 		} else {
 			pre.next = &elem{
