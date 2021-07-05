@@ -1,4 +1,4 @@
-package combinations
+package _077_combinations
 
 func combine(n int, k int) (ans [][]int) {
 	res, track := make([][]int, 0), make([]int, 0)

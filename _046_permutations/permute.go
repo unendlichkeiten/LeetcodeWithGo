@@ -1,4 +1,4 @@
-package _46_permutations
+package _046_permutations
 
 func permute(nums []int) [][]int {
 	res, track := make([][]int, 0), make([]int, 0)
