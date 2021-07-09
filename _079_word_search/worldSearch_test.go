@@ -39,6 +39,24 @@ func Test_exist(t *testing.T) {
 				},
 				"ABCB"},
 			false},
+		{"test-04",
+			args{
+				[][]byte{
+					{'C', 'A', 'A'},
+					{'A', 'A', 'A'},
+					{'B', 'C', 'D'},
+				},
+				"AAB"},
+			true},
+		{"test-05",
+			args{
+				[][]byte{
+					{'A', 'B', 'C', 'E'},
+					{'S', 'F', 'E', 'S'},
+					{'A', 'D', 'E', 'E'},
+				},
+				"ABCESEEEFS"},
+			true},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
