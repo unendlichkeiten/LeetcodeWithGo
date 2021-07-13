@@ -1,6 +1,6 @@
 package _051_n_queens
 
-func solveNQueens(n int) [][]string {
+func SolveNQueens(n int) [][]string {
 	res := make([][]string, 0)
 	board := make([][]byte, n)
 	for i := range board {
