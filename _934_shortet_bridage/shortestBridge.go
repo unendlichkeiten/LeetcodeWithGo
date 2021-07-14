@@ -30,7 +30,7 @@ func shortestBridge(grid [][]int) int {
 	for len(queue) > 0 {
 		level++
 		nPoints := len(queue)
-		for nPoints > 0 {
+		for ; nPoints > 0; nPoints-- {
 			p := queue[0]
 			queue = queue[1:]
 			for _, direction := range directions {
@@ -51,7 +51,7 @@ func shortestBridge(grid [][]int) int {
 }
 
 func dfs(grid [][]int, queue []*point, r, c, i, j int) {
-	if grid[i][j] == 2 || i == r || j == c || i < 0 || j < 0 {
+	if i == r || j == c || i < 0 || j < 0 || grid[i][j] == 2 {
 		return
 	}
 
@@ -59,6 +59,7 @@ func dfs(grid [][]int, queue []*point, r, c, i, j int) {
 		queue = append(queue, &point{i, j})
 		return
 	}
+
 	grid[i][j] = 2
 
 	dfs(grid, queue, r, c, i+1, j)
