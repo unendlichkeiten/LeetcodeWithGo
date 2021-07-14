@@ -25,7 +25,7 @@ func shortestBridge(grid [][]int) int {
 		}
 	}
 
-	// 使用 bfs 遍历第一个岛屿每个点到第二个岛屿的距离，取最小值
+	// 使用 bfs 计算两个岛屿之间的最小值
 	x, y := 0, 0
 	for len(queue) > 0 {
 		level++
@@ -43,6 +43,7 @@ func shortestBridge(grid [][]int) int {
 						return level
 					}
 					queue = append(queue, &point{x, y})
+					grid[x][y] = 2
 				}
 			}
 		}
