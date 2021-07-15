@@ -1,4 +1,4 @@
-package _934_shortet_bridage
+package _934_shortest_bridge
 
 type point struct {
 	x int
