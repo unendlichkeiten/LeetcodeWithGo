@@ -7,6 +7,10 @@ func findLadders(beginWord string, endWord string, wordList []string) [][]string
 		wordsMap[word] = true
 	}
 
+	if !wordsMap[endWord] {
+		return wordLadders
+	}
+
 	// create a queue, track the path
 	queue := make([][]string, 0)
 	queue = append(queue, []string{beginWord})
@@ -35,7 +39,7 @@ func findLadders(beginWord string, endWord string, wordList []string) [][]string
 					// different from word ladder, don't remove the word from wordsMap im
 					// -mediately, same level would reuse the key. delete from wordMap only
 					// when currently level is done
-					levelMap[nextWord] = true // warning
+					levelMap[nextWord] = true // warning todo
 					newPath := make([]string, len(path))
 					copy(newPath, path)
 					newPath = append(newPath, nextWord)
@@ -52,7 +56,7 @@ func findLadders(beginWord string, endWord string, wordList []string) [][]string
 			}
 
 			for word := range levelMap {
-				delete(levelMap, word)
+				delete(wordsMap, word)
 			}
 			levelMap = make(map[string]bool)
 			queueLen = len(queue)
