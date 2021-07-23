@@ -56,6 +56,7 @@ func dfs(grid [][]int, queue *[]*point, r, c, i, j int) {
 	}
 
 	if grid[i][j] == 0 {
+		grid[i][j] = 2
 		*queue = append(*queue, &point{i, j})
 		return
 	}
