@@ -26,7 +26,7 @@ func ClimbStairsv2(n int) int {
 		return n
 	}
 
-	pre1, pre2, cur := 1, 2, 0
+	pre1, pre2, cur := 2, 1, 0
 	for i := 3; i <= n; i++ {
 		cur = pre1 + pre2
 		pre2 = pre1
