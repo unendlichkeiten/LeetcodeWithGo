@@ -5,7 +5,7 @@ func minPathSum(grid [][]int) int {
 	// dp[i][j] = min(dp[i][j+1], dp[i+1][j]) + grid[i][j]
 
 	// 初始化 dp
-	dp := [][]int{}
+	dp := make([][]int, 0)
 	for i := 0; i < len(grid); i++ {
 		tmp := make([]int, len(grid[0]))
 		dp = append(dp, tmp)
