@@ -1,3 +1,4 @@
+// iterator demo
 package main
 
 import "fmt"
