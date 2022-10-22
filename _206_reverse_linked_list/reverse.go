@@ -17,3 +17,16 @@ func reverseList(head *ListNode) *ListNode {
 
 	return curNode
 }
+
+// reverseListV2 使用递归的方法实现
+func reverseListV2(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+
+	newHead := reverseListV2(head.Next)
+	head.Next.Next = head
+	head.Next = nil
+
+	return newHead
+}

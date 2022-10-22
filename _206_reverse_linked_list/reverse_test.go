@@ -30,7 +30,7 @@ func Test_reverseList(t *testing.T) {
 	}
 
 	log.Printf("after reverse linked list\n")
-	tmp = reverseList(sample)
+	tmp = reverseListV2(sample)
 	for tmp != nil {
 		log.Printf("value is : %d \n", tmp.Val)
 		tmp = tmp.Next
