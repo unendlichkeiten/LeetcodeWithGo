@@ -4,12 +4,14 @@ import (
 	"log"
 	"math/rand"
 	"testing"
+
+	leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
 )
 
 func TestSortList(t *testing.T) {
-	list1, tmp1 := (*ListNode)(nil), (*ListNode)(nil)
+	list1, tmp1 := (*leetCode.ListNode)(nil), (*leetCode.ListNode)(nil)
 	for i := 1; i < 6; i++ {
-		newNode := &ListNode{
+		newNode := &leetCode.ListNode{
 			Val:  rand.Intn(10),
 			Next: nil,
 		}

@@ -1,19 +1,16 @@
 package _023_merge_k_sorted_list
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
 
-func mergeKLists(lists []*ListNode) *ListNode {
-	newList := (*ListNode)(nil)
+func mergeKLists(lists []*leetCode.ListNode) *leetCode.ListNode {
+	newList := (*leetCode.ListNode)(nil)
 	for _, list := range lists {
 		newList = mergeTwoLists(newList, list)
 	}
 	return newList
 }
 
-func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
+func mergeTwoLists(list1 *leetCode.ListNode, list2 *leetCode.ListNode) *leetCode.ListNode {
 	if list1 == nil {
 		return list2
 	}
@@ -22,7 +19,7 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 		return list1
 	}
 
-	newList, newListTail := (*ListNode)(nil), (*ListNode)(nil)
+	newList, newListTail := (*leetCode.ListNode)(nil), (*leetCode.ListNode)(nil)
 	for list1 != nil && list2 != nil {
 		// 确定头节点
 		if newList == nil {

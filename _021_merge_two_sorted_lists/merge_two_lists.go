@@ -1,11 +1,8 @@
 package _021_merge_two_sorted_lists
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
 
-func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
+func mergeTwoLists(list1 *leetCode.ListNode, list2 *leetCode.ListNode) *leetCode.ListNode {
 	if list1 == nil {
 		return list2
 	}
@@ -14,7 +11,7 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 		return list1
 	}
 
-	newList, newListTail := (*ListNode)(nil), (*ListNode)(nil)
+	newList, newListTail := (*leetCode.ListNode)(nil), (*leetCode.ListNode)(nil)
 	for list1 != nil && list2 != nil {
 		// 确定头节点
 		if newList == nil {

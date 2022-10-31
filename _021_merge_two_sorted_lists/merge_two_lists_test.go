@@ -3,12 +3,14 @@ package _021_merge_two_sorted_lists
 import (
 	"log"
 	"testing"
+
+	leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
 )
 
 func Test_mergeTwoLists(t *testing.T) {
-	list1, tmp1 := (*ListNode)(nil), (*ListNode)(nil)
+	list1, tmp1 := (*leetCode.ListNode)(nil), (*leetCode.ListNode)(nil)
 	for i := 1; i < 6; i++ {
-		newNode := &ListNode{
+		newNode := &leetCode.ListNode{
 			Val:  2 * i,
 			Next: nil,
 		}
@@ -22,9 +24,9 @@ func Test_mergeTwoLists(t *testing.T) {
 		}
 	}
 
-	list2, tmp2 := (*ListNode)(nil), (*ListNode)(nil)
+	list2, tmp2 := (*leetCode.ListNode)(nil), (*leetCode.ListNode)(nil)
 	for i := 0; i < 3; i++ {
-		newNode := &ListNode{
+		newNode := &leetCode.ListNode{
 			Val:  2*i + 1,
 			Next: nil,
 		}

@@ -1,9 +1,10 @@
 package _026_reorder_list
 
 import (
-	leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
 	"log"
 	"testing"
+
+	leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
 )
 
 func Test_reorderList(t *testing.T) {

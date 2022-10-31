@@ -1,17 +1,16 @@
 package _077_list_sorting
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import (
+	leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
+)
 
-func SortList(head *ListNode) *ListNode {
+func SortList(head *leetCode.ListNode) *leetCode.ListNode {
 
 	if head == nil {
 		return head
 	}
 
-	nodeArr := make([]*ListNode, 0)
+	nodeArr := make([]*leetCode.ListNode, 0)
 	for head != nil {
 		nodeArr = append(nodeArr, head)
 		head = head.Next
@@ -30,7 +29,7 @@ func SortList(head *ListNode) *ListNode {
 	return newList
 }
 
-func QuickSort(nodeArr []*ListNode) {
+func QuickSort(nodeArr []*leetCode.ListNode) {
 	if len(nodeArr) <= 1 {
 		return
 	}
@@ -39,7 +38,7 @@ func QuickSort(nodeArr []*ListNode) {
 	return
 }
 
-func quickSort(nodeArr []*ListNode, l, r int) {
+func quickSort(nodeArr []*leetCode.ListNode, l, r int) {
 	pivotPos := 0
 	if l < r {
 		pivotPos = getPartition(nodeArr, l, r)
@@ -48,7 +47,7 @@ func quickSort(nodeArr []*ListNode, l, r int) {
 	}
 }
 
-func getPartition(nums []*ListNode, l, r int) int {
+func getPartition(nums []*leetCode.ListNode, l, r int) int {
 	pivot := nums[l]
 	for l < r {
 		for l < r && pivot.Val <= nums[r].Val {

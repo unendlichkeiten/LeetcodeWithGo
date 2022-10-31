@@ -3,14 +3,16 @@ package _023_merge_k_sorted_list
 import (
 	"log"
 	"testing"
+
+	leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
 )
 
 func Test_mergeKLists(t *testing.T) {
-	lists := make([]*ListNode, 3)
+	lists := make([]*leetCode.ListNode, 3)
 	for index := 0; index < 3; index++ {
-		list, tmp := (*ListNode)(nil), (*ListNode)(nil)
+		list, tmp := (*leetCode.ListNode)(nil), (*leetCode.ListNode)(nil)
 		for i := 1; i < index+2; i++ {
-			newNode := &ListNode{
+			newNode := &leetCode.ListNode{
 				Val:  2*i + index,
 				Next: nil,
 			}
