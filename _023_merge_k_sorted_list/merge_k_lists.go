@@ -10,7 +10,7 @@ func mergeKLists(lists []*leetCode.ListNode) *leetCode.ListNode {
 	return newList
 }
 
-func mergeTwoLists(list1 *leetCode.ListNode, list2 *leetCode.ListNode) *leetCode.ListNode {
+func mergeTwoLists(list1, list2 *leetCode.ListNode) *leetCode.ListNode {
 	if list1 == nil {
 		return list2
 	}
