@@ -1,12 +1,9 @@
 package _206_reverse_linked_list
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
 
-func reverseList(head *ListNode) *ListNode {
-	curNode, nextNode := (*ListNode)(nil), head
+func reverseList(head *leetCode.ListNode) *leetCode.ListNode {
+	curNode, nextNode := (*leetCode.ListNode)(nil), head
 
 	for nextNode != nil {
 		tmp := nextNode
@@ -19,7 +16,7 @@ func reverseList(head *ListNode) *ListNode {
 }
 
 // reverseListV2 使用递归的方法实现
-func reverseListV2(head *ListNode) *ListNode {
+func reverseListV2(head *leetCode.ListNode) *leetCode.ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}

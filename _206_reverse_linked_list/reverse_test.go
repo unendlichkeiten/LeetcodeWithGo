@@ -3,12 +3,14 @@ package _206_reverse_linked_list
 import (
 	"log"
 	"testing"
+
+	leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
 )
 
 func Test_reverseList(t *testing.T) {
-	sample, tmp := (*ListNode)(nil), (*ListNode)(nil)
+	sample, tmp := (*leetCode.ListNode)(nil), (*leetCode.ListNode)(nil)
 	for i := 1; i < 6; i++ {
-		newNode := &ListNode{
+		newNode := &leetCode.ListNode{
 			Val:  i,
 			Next: nil,
 		}

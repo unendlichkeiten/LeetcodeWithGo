@@ -1,13 +1,10 @@
 package _025_reverse_nodes_k
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
 
 // swapPairs 两两节点交换
-func swapPairs(head *ListNode, k int) *ListNode {
-	resList, resListTail, nextNode := (*ListNode)(nil), (*ListNode)(nil), head
+func swapPairs(head *leetCode.ListNode, k int) *leetCode.ListNode {
+	resList, resListTail, nextNode := (*leetCode.ListNode)(nil), (*leetCode.ListNode)(nil), head
 
 	// 特殊情况处理
 	if head == nil || head.Next == nil {
@@ -49,7 +46,7 @@ func swapPairs(head *ListNode, k int) *ListNode {
 	return resList
 }
 
-func getTailNode(head *ListNode) *ListNode {
+func getTailNode(head *leetCode.ListNode) *leetCode.ListNode {
 	tmpNode := head
 
 	for tmpNode != nil && tmpNode.Next != nil {
@@ -58,8 +55,8 @@ func getTailNode(head *ListNode) *ListNode {
 	return tmpNode
 }
 
-func reverseList(head *ListNode) *ListNode {
-	curNode, nextNode := (*ListNode)(nil), head
+func reverseList(head *leetCode.ListNode) *leetCode.ListNode {
+	curNode, nextNode := (*leetCode.ListNode)(nil), head
 
 	for nextNode != nil {
 		tmp := nextNode
