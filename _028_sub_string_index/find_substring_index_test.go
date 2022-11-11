@@ -15,7 +15,7 @@ func Test_strStr(t *testing.T) {
 		args args
 		want int
 	}{
-		{"test01", args{"hello world", "hello"}, 0},
+		{"test01", args{"hello world", "o wor"}, 4},
 		{"test02", args{"leetcode", "leeto"}, -1},
 		{"test03", args{"mississippi", "issi"}, 1},
 	}
