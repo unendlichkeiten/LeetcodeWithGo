@@ -1,14 +1,13 @@
 package _141_linked_list_cycle
 
-import "fmt"
+import (
+	"fmt"
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+	leetCode "github.com/unendlichkeiten/LeetcodeWithGo"
+)
 
 // hasCycleV1 使用快慢指针的方法
-func hasCycleV1(head *ListNode) bool {
+func hasCycleV1(head *leetCode.ListNode) bool {
 	slow, fast := head, head
 	for slow != nil && fast != nil && fast.Next != nil {
 		slow = slow.Next
@@ -21,8 +20,8 @@ func hasCycleV1(head *ListNode) bool {
 }
 
 // hasCycleV2 使用 map 的方法
-func hasCycleV2(head *ListNode) bool {
-	pointMap := make(map[string]*ListNode)
+func hasCycleV2(head *leetCode.ListNode) bool {
+	pointMap := make(map[string]*leetCode.ListNode)
 	for head != nil {
 		address := fmt.Sprintf("%p", head)
 		if _, ok := pointMap[address]; ok {
