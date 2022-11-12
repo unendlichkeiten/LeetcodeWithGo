@@ -13,9 +13,11 @@
 - [1668. 最大重复子字符串](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_1668_maximum_repeating_substring)
 ### 模式匹配和 KMP 算法
 ### 链表
-- [206.反转链表](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_206_reverse_linked_list)
 - [24.两两交换链表中的节点](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_024_swap_two_nodes)
 - [25.k个一组反转链表](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_025_reerse_nodes_k)
+- [206.反转链表](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_206_reverse_linked_list)
+- [141.环形链表](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_141_linked_list_cycle)
+- [142.环形链表进阶](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_142_linked_list_cycle_ii)
 ### 堆栈
 ### 队列
 ### 深度优先遍历
