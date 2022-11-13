@@ -15,9 +15,9 @@
 ### 链表
 - [24.两两交换链表中的节点](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_024_swap_two_nodes)
 - [25.k个一组反转链表](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_025_reerse_nodes_k)
-- [206.反转链表](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_206_reverse_linked_list)
 - [141.环形链表](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_141_linked_list_cycle)
 - [142.环形链表进阶](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_142_linked_list_cycle_ii)
+- [206.反转链表](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_206_reverse_linked_list)
 ### 堆栈
 ### 队列
 ### 深度优先遍历
