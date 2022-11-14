@@ -8,7 +8,7 @@ type nodeStack struct {
 }
 
 // flattenV1 resolve problem with preOrder
-func flattenV1(root *leCode.DoubleListNode) *leCode.DoubleListNode {
+func flatten(root *leCode.DoubleListNode) *leCode.DoubleListNode {
 	if root == nil {
 		return nil
 	}
@@ -20,17 +20,17 @@ func flattenV1(root *leCode.DoubleListNode) *leCode.DoubleListNode {
 	newRoot, newRootTail := (*leCode.DoubleListNode)(nil), (*leCode.DoubleListNode)(nil)
 	for node != nil || !isEmptyStack(stack) {
 		if node != nil {
+			tmpNode := new(leCode.DoubleListNode)
+			tmpNode.Val = node.Val
 			if newRoot == nil {
-				newRoot = node
-				newRootTail = node //
+				newRoot, newRootTail = tmpNode, tmpNode
 			} else {
-				newRootTail.Next = node
-				node.Prev = newRootTail
-				newRootTail = node
+				newRootTail.Next = tmpNode
+				tmpNode.Prev = newRootTail
+				newRootTail = tmpNode
 			}
 			pushStack(stack, node)
 			node = node.Child
-			newRootTail.Child = nil
 		} else {
 			node = popStack(stack)
 			node = node.Next

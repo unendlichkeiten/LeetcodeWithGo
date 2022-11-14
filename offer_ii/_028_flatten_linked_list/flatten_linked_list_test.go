@@ -22,5 +22,5 @@ func Test_flattenV1(t *testing.T) {
 
 	sample.Next.Prev = &sample
 
-	flattenV1(&sample)
+	flatten(&sample)
 }
