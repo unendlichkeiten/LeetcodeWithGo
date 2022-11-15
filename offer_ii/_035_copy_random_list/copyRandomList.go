@@ -7,17 +7,17 @@ import (
 )
 
 var (
-	_nodeMap  = make(map[string]*leetCode.Node)
-	_nodeMap2 = make(map[*leetCode.Node]*leetCode.Node)
+	_nodeMap  = make(map[string]*leetCode.RandomNode)
+	_nodeMap2 = make(map[*leetCode.RandomNode]*leetCode.RandomNode)
 )
 
-func copyRandomList2(head *leetCode.Node) *leetCode.Node {
+func copyRandomList2(head *leetCode.RandomNode) *leetCode.RandomNode {
 	if head == nil {
 		return nil
 	}
 
 	for node := head; node != nil; node = node.Next {
-		_nodeMap2[node] = &leetCode.Node{Val: node.Val}
+		_nodeMap2[node] = &leetCode.RandomNode{Val: node.Val}
 	}
 
 	for node := head; node != nil; node = node.Next {
@@ -29,7 +29,7 @@ func copyRandomList2(head *leetCode.Node) *leetCode.Node {
 }
 
 // 采用递归函数 + hashMap
-func copyRandomList(head *leetCode.Node) *leetCode.Node {
+func copyRandomList(head *leetCode.RandomNode) *leetCode.RandomNode {
 
 	if head == nil {
 		return nil
@@ -40,7 +40,7 @@ func copyRandomList(head *leetCode.Node) *leetCode.Node {
 		return n
 	}
 
-	newNode := new(leetCode.Node)
+	newNode := new(leetCode.RandomNode)
 	newNode.Val = head.Val
 	_nodeMap[key] = newNode
 	newNode.Next = copyRandomList(head.Next)

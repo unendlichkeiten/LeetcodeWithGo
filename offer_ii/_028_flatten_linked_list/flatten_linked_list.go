@@ -1,14 +1,14 @@
 package _028_flatten_linked_list
 
-import leCode "github.com/unendlichkeiten/LeetcodeWithGo"
+import leetcode "github.com/unendlichkeiten/LeetcodeWithGo"
 
 type nodeStack struct {
-	Nodes []*leCode.DoubleListNode
+	Nodes []*leetcode.DoubleListNode
 	Size  int
 }
 
 // flattenV1 resolve problem with preOrder
-func flatten(root *leCode.DoubleListNode) *leCode.DoubleListNode {
+func flatten(root *leetcode.DoubleListNode) *leetcode.DoubleListNode {
 	if root == nil {
 		return nil
 	}
@@ -17,10 +17,10 @@ func flatten(root *leCode.DoubleListNode) *leCode.DoubleListNode {
 	stack := createStack()
 
 	node := root
-	newRoot, newRootTail := (*leCode.DoubleListNode)(nil), (*leCode.DoubleListNode)(nil)
+	newRoot, newRootTail := (*leetcode.DoubleListNode)(nil), (*leetcode.DoubleListNode)(nil)
 	for node != nil || !isEmptyStack(stack) {
 		if node != nil {
-			tmpNode := new(leCode.DoubleListNode)
+			tmpNode := new(leetcode.DoubleListNode)
 			tmpNode.Val = node.Val
 			if newRoot == nil {
 				newRoot, newRootTail = tmpNode, tmpNode
@@ -41,22 +41,22 @@ func flatten(root *leCode.DoubleListNode) *leCode.DoubleListNode {
 }
 
 func isEmptyStack(stack *nodeStack) bool {
-	return stack.Size == leCode.Zero
+	return stack.Size == leetcode.Zero
 }
 
 func createStack() *nodeStack {
 	return &nodeStack{
-		Nodes: make([]*leCode.DoubleListNode, 0),
-		Size:  leCode.Zero,
+		Nodes: make([]*leetcode.DoubleListNode, 0),
+		Size:  leetcode.Zero,
 	}
 }
 
-func pushStack(stack *nodeStack, node *leCode.DoubleListNode) {
+func pushStack(stack *nodeStack, node *leetcode.DoubleListNode) {
 	stack.Nodes = append(stack.Nodes, node)
 	stack.Size++
 }
 
-func popStack(stack *nodeStack) *leCode.DoubleListNode {
+func popStack(stack *nodeStack) *leetcode.DoubleListNode {
 	node := stack.Nodes[stack.Size-1]
 	stack.Size--
 	stack.Nodes = stack.Nodes[:stack.Size]

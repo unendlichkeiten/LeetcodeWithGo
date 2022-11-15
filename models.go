@@ -5,13 +5,23 @@ const (
 	Empty = ""
 )
 
+// ListNode defines a normal linked list node
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-type Node struct {
+// RandomNode defines a linked list node which contains a random node
+type RandomNode struct {
 	Val    int
-	Next   *Node
-	Random *Node
+	Next   *RandomNode
+	Random *RandomNode
+}
+
+// DoubleListNode defines a double linked list node
+type DoubleListNode struct {
+	Val   int
+	Prev  *DoubleListNode
+	Next  *DoubleListNode
+	Child *DoubleListNode
 }
