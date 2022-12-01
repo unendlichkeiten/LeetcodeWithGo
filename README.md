@@ -19,6 +19,7 @@
 - [142.环形链表进阶](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_142_linked_list_cycle_ii)
 - [206.反转链表](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_206_reverse_linked_list)
 ### 二叉树
+- [28.展平多级双向链表](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_028_flatten_linked_list)
 - [2196.根据描述创建二叉树](https://github.com/unendlichkeiten/LeetcodeWithGo/tree/main/_2196_create_binary_tree)
 ### 堆栈
 ### 队列
